@@ -166,11 +166,22 @@ happy-drives/
 
 ## 🚀 Installation
 
+### Quick Start (5 Minutes)
+👉 **New to the project?** Follow our [**Quick Start Guide**](QUICK_START.md) for a fast setup!
+
+### Complete Setup Instructions
+📖 **Need detailed steps?** Check the [**Complete Setup Guide**](SETUP_GUIDE.md) with:
+- Detailed software installation for Windows, macOS, and Linux
+- Production deployment on VPS/Cloud servers
+- Docker deployment
+- Troubleshooting guide
+- Performance optimization tips
+
 ### Prerequisites
 
 - **Node.js**: v16+ and Yarn
-- **Python**: 3.9+
-- **MongoDB**: 5.0+
+- **Python**: 3.9-3.11 (Recommended: 3.10)
+- **MongoDB**: 5.0+ (Recommended: 6.0)
 - **Git**: Latest version
 
 ### Clone Repository
@@ -191,6 +202,8 @@ yarn install
 
 ```bash
 cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
