@@ -48,6 +48,7 @@ class AuthService:
             "hashed_password": hashed_password,
             "full_name": user_data.full_name,
             "phone": user_data.phone,
+            "profile_completed": False,
             "role": UserRole.USER,
             "is_active": True,
             "is_deleted": False,
@@ -67,6 +68,7 @@ class AuthService:
             email=user_data.email,
             full_name=user_data.full_name,
             phone=user_data.phone,
+            profile_completed=False,
             role=UserRole.USER,
             is_active=True,
             created_at=user_doc["created_at"]
@@ -127,6 +129,7 @@ class AuthService:
             email=user["email"],
             full_name=user["full_name"],
             phone=user.get("phone"),
+            profile_completed=user.get("profile_completed", False),
             role=user["role"],
             is_active=user["is_active"],
             created_at=user["created_at"]

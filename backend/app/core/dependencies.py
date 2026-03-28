@@ -1,7 +1,7 @@
 """Dependency injection for authentication and database"""
 from typing import Optional
 from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPBearer, HTTPAuthBearer
+from fastapi.security import HTTPBearer
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from app.core.security import decode_access_token

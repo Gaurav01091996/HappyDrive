@@ -38,23 +38,12 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/cars" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
                   Self-Drive Cars
-                </Link>
-              </li>
-              <li>
-                <Link to="/driver-service" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
-                  Driver Service
-                </Link>
-              </li>
-              <li>
-                <Link to="/packages" className="text-gray-400 hover:text-red-600 transition-colors text-sm">
-                  Package Trips
                 </Link>
               </li>
               <li>
@@ -70,16 +59,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Luxury Car Rentals</li>
-              <li>Self-Drive Options</li>
-              <li>Professional Drivers</li>
-              <li>Custom Trip Packages</li>
+              <li>Self-Drive Car Rentals</li>
               <li>Airport Transfers</li>
               <li>Corporate Rentals</li>
+              <li>Long-Term Rentals</li>
             </ul>
           </div>
 
@@ -90,8 +76,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3 text-sm">
                 <Phone className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400">+91 98765 43210</p>
-                  <p className="text-gray-400">+91 98765 43211</p>
+                  <p className="text-gray-400">+91 70996 74802</p>
+                  <p className="text-gray-400">+91 70996 74802</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-sm">
@@ -123,6 +109,10 @@ const Footer = () => {
                 Refund Policy
               </a>
             </div>
+            <p className="text-xs text-gray-600">
+              Powered by{' '}
+              <span className="text-gray-400 font-semibold tracking-wide">Algotech</span>
+            </p>
           </div>
         </div>
       </div>
