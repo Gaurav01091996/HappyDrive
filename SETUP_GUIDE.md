@@ -298,7 +298,7 @@ ENVIRONMENT=development
 **Test Backend:**
 ```bash
 # Run backend server
-uvicorn server:app --reload --host 0.0.0.0 --port 8001
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 
 # Server should start at http://localhost:8001
 # API docs at http://localhost:8001/docs

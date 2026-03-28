@@ -30,16 +30,19 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # CORS
-    CORS_ORIGINS: str = '["http://localhost:3000"]'
+    CORS_ORIGINS: List[str] = ['http://localhost:3000', 'http://localhost:5173']
     
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod
     def parse_cors_origins(cls, v):
+        if isinstance(v, list):
+            return v
         if isinstance(v, str):
-            try:
-                return json.loads(v)
-            except json.JSONDecodeError:
+            # Handle comma-separated values
+            if ',' in v:
                 return [origin.strip() for origin in v.split(",")]
+            # Handle single value
+            return [v.strip()] if v.strip() else []
         return v
     
     # Rate Limiting

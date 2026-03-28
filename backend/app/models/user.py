@@ -18,6 +18,11 @@ class UserModel(BaseModel):
     hashed_password: str
     full_name: str
     phone: Optional[str] = None
+    address: Optional[str] = None
+    age: Optional[int] = None
+    driving_license_number: Optional[str] = None
+    driving_license_upload_url: Optional[str] = None  # Path to uploaded file
+    profile_completed: bool = False  # Flag to track if profile is complete
     role: UserRole = UserRole.USER
     is_active: bool = True
     is_deleted: bool = False

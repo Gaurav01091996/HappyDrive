@@ -11,7 +11,7 @@ from slowapi.errors import RateLimitExceeded
 
 from app.core.config import settings
 from app.db.mongodb import connect_to_mongodb, close_mongodb_connection, get_database
-from app.api.v1 import auth, cars, bookings
+from app.api.v1 import auth, cars, bookings, profile
 from app.services.auth import AuthService
 
 # Configure logging
@@ -181,6 +181,7 @@ async def root():
 app.include_router(auth.router, prefix="/api/v1")
 app.include_router(cars.router, prefix="/api/v1")
 app.include_router(bookings.router, prefix="/api/v1")
+app.include_router(profile.router, prefix="/api/v1")
 
 
 if __name__ == "__main__":

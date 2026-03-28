@@ -58,7 +58,7 @@ JWT_SECRET=your_secret_key_change_in_production
 ENVIRONMENT=development" > .env
 
 # Start backend
-uvicorn server:app --reload --host 0.0.0.0 --port 8001
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 ```
 
 **✅ Backend Running:** http://localhost:8001/docs
@@ -170,10 +170,10 @@ npm install -g yarn
 ### Backend
 ```bash
 # Start server
-uvicorn server:app --reload --host 0.0.0.0 --port 8001
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 
 # Run with logs
-uvicorn server:app --reload --log-level debug
+uvicorn app.main:app --reload --log-level debug
 
 # Check Python version
 python --version
